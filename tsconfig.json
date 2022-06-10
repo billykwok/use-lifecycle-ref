@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "downlevelIteration": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "jsx": "preserve"
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["types/*.d.ts", "node_modules"]
+}
