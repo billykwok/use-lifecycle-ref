@@ -1,15 +1,14 @@
 module.exports = {
   root: true,
   env: {
-    commonjs: true,
-    amd: true,
-    es6: true,
-    node: true,
     browser: true,
+    node: true,
+    commonjs: true,
+    es6: true,
   },
   parser: '@babel/eslint-parser',
   parserOptions: {
-    ecmaVersion: 11,
+    ecmaVersion: 'latest',
     sourceType: 'module',
     ecmaFeatures: { impliedStrict: true },
     project: './tsconfig.json',

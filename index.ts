@@ -6,7 +6,7 @@ import {
   type RefCallback,
 } from 'react';
 
-const useLifecycleRef = <T extends Element>({
+export const useLifecycleRef = <T extends Element>({
   onAttach,
   onDetach,
   ref,

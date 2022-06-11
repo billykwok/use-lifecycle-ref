@@ -4,14 +4,28 @@ import { terser } from 'rollup-plugin-terser';
 
 export default {
   input: './index.ts',
-  output: {
-    dir: './lib/',
-    format: 'cjs',
-    sourcemap: false,
-    freeze: false,
-    compact: true,
-    exports: 'auto',
-  },
+  output: [
+    {
+      dir: 'lib/',
+      format: 'cjs',
+      sourcemap: true,
+      generatedCode: 'es2015',
+      freeze: false,
+      externalLiveBindings: false,
+      compact: true,
+      exports: 'named',
+    },
+    {
+      dir: 'lib/es',
+      format: 'es',
+      sourcemap: true,
+      generatedCode: 'es2015',
+      freeze: false,
+      externalLiveBindings: false,
+      compact: true,
+      exports: 'named',
+    },
+  ],
   external: [/@babel\/runtime-corejs3/i, 'react'],
   treeshake: { moduleSideEffects: false, propertyReadSideEffects: false },
   plugins: [
