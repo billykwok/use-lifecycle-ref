@@ -1,15 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "ES2015",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "skipLibCheck": true,
     "downlevelIteration": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "isolatedModules": true,
-    "module": "CommonJS",
-    "moduleResolution": "node",
-    "jsx": "preserve"
+    "module": "ES2015",
+    "moduleResolution": "node"
   },
   "include": ["**/*.ts"],
   "exclude": ["types/*.d.ts", "node_modules"]

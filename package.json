@@ -32,7 +32,7 @@
   "scripts": {
     "lint": "eslint ./*.ts",
     "clean": "rm -rf lib types",
-    "build": "pnpm clean && rollup -c rollup.config.js && rollup -c rollup.config.js -f es -d ./lib/es/ && tsc --project tsconfig.types.json",
+    "build": "pnpm clean && rollup -c rollup.config.js && tsc --project tsconfig.types.json",
     "test": "jest",
     "prepare": "husky install"
   },
