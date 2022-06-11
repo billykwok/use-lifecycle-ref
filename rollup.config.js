@@ -14,6 +14,7 @@ export default {
       freeze: false,
       externalLiveBindings: false,
       compact: true,
+      exports: 'default',
     },
     {
       dir: 'lib/es',
@@ -24,6 +25,7 @@ export default {
       freeze: false,
       externalLiveBindings: false,
       compact: true,
+      exports: 'default',
     },
   ],
   external: [/@babel\/runtime-corejs3/i, 'react'],
