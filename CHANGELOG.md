@@ -1,5 +1,11 @@
 # use-lifecycle-ref
 
+## 1.0.3
+
+### Patch Changes
+
+- f07800d: fix: revert breaking default export (dropping named export support)
+
 ## 1.0.2
 
 ### Patch Changes
