@@ -4,11 +4,11 @@
   "version": "1.0.1",
   "type": "module",
   "exports": {
-    "import": "./lib/es/index.js",
+    "import": "./lib/es/index.mjs",
     "require": "./lib/index.cjs",
     "types": "./types/index.d.ts"
   },
-  "module": "./lib/es/index.js",
+  "module": "./lib/es/index.mjs",
   "main": "./lib/index.xjs",
   "types": "./types/index.d.ts",
   "files": [
