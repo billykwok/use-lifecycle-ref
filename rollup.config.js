@@ -7,6 +7,7 @@ export default {
   output: [
     {
       dir: 'lib/',
+      entryFileNames: '[name].cjs',
       format: 'cjs',
       sourcemap: true,
       generatedCode: 'es2015',
@@ -17,6 +18,7 @@ export default {
     },
     {
       dir: 'lib/es',
+      entryFileNames: '[name].mjs',
       format: 'es',
       sourcemap: true,
       generatedCode: 'es2015',
