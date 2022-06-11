@@ -28,7 +28,7 @@ jobs:
           node-version: '18.x'
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.2
+        uses: pnpm/action-setup@v2
         id: pnpm-install
         with:
           version: 7
@@ -40,6 +40,7 @@ jobs:
       - name: Publish to npm
         uses: changesets/action@v1
         with:
+          version: echo skip
           publish: pnpm changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
