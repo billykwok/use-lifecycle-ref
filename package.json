@@ -5,11 +5,11 @@
   "type": "module",
   "exports": {
     "import": "./lib/es/index.js",
-    "require": "./lib/index.js",
+    "require": "./lib/index.cjs",
     "types": "./types/index.d.ts"
   },
   "module": "./lib/es/index.js",
-  "main": "./lib/index.js",
+  "main": "./lib/index.xjs",
   "types": "./types/index.d.ts",
   "files": [
     "lib",
