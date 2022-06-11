@@ -14,8 +14,6 @@ Here is a simplfied demonstration on how easy to use `useLifecycleRef`.
 ```tsx
 import React, { type Ref } from 'react';
 import useLifecycleRef from 'use-lifecycle-ref';
-// or
-// import { useLifecycleRef } from 'use-lifecycle-ref';
 
 export type Props = {
   ref: Ref<HTMLDivElement>
