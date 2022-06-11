@@ -1,7 +1,7 @@
 # `useLifecycleRef`
 
-![npm](https://img.shields.io/npm/v/use-lifecycle-ref)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/use-lifecycle-ref)
+[![npm](https://img.shields.io/npm/v/use-lifecycle-ref)](https://npmjs.com/package/use-lifecycle-ref)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/use-lifecycle-ref)](https://bundlephobia.com/package/use-lifecycle-ref)
 [![codecov](https://codecov.io/gh/billykwok/use-lifecycle-ref/branch/main/graph/badge.svg?token=I73J70MS2V)](https://codecov.io/gh/billykwok/use-lifecycle-ref)
 [![Test](https://github.com/billykwok/use-lifecycle-ref/actions/workflows/test.yml/badge.svg)](https://github.com/billykwok/use-lifecycle-ref/actions/workflows/test.yml)
 
