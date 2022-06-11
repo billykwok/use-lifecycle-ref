@@ -1,5 +1,12 @@
 # use-lifecycle-ref
 
+## 1.0.2
+
+### Patch Changes
+
+- 862d014: fix: use .cjs extension for CommonJS export
+- d024074: fix: use .mjs extension for ESM export
+
 ## 1.0.1
 
 ### Patch Changes
