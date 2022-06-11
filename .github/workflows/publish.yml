@@ -1,14 +1,9 @@
-name: Test
+name: Publish
 
 on:
   pull_request:
-    branches: ['**']
-  push:
-    branches: ['**']
-    paths-ignore:
-      - 'CHANGELOG.md'
-      - 'package.json'
-      - '.changeset/**/*.md'
+    types: [closed]
+    branches: [main]
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -17,8 +12,10 @@ env:
   PNPM_CACHE_FOLDER: .pnpm-store
 
 jobs:
-  test:
-    name: Test
+  publish:
+    name: Publish
+    if: >
+      github.event.pull_request.merged == true && github.event.pull_request.title == 'chore: update versions'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -54,12 +51,16 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Test
-        run: pnpm test
+      - name: Build
+        run: pnpm build
 
-      - name: Coverage
-        uses: codecov/codecov-action@v2
+      - name: Publish to npm
+        uses: changesets/action@v1
         with:
-          directory: ./coverage
-          fail_ci_if_error: true
-          verbose: true
+          version: pnpm changeset version
+          commit: "chore: update versions"
+          title: "chore: update versions"
+          publish: pnpm changeset publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
