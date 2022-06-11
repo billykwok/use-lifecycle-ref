@@ -1,5 +1,9 @@
 # `useLifecycleRef`
 
+![npm](https://img.shields.io/npm/v/use-lifecycle-ref)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/use-lifecycle-ref)
+[![codecov](https://codecov.io/gh/billykwok/use-lifecycle-ref/branch/main/graph/badge.svg?token=I73J70MS2V)](https://codecov.io/gh/billykwok/use-lifecycle-ref)
+
 Like useRef, but with lifecycle and ref merging support
 
 ## Quick Look
