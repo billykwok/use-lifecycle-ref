@@ -1,7 +1,7 @@
 {
   "name": "use-lifecycle-ref",
   "description": "Like useRef, but with lifecycle and ref merging support",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "exports": {
     "import": "./lib/es/index.mjs",
