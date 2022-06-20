@@ -3,7 +3,7 @@
  */
 import { act, renderHook } from '@testing-library/react';
 import { createRef, type RefCallback, type Ref } from 'react';
-import { jest, describe, expect, afterEach } from '@jest/globals';
+import { describe, expect, afterEach, jest, test } from '@jest/globals';
 
 import useLifecycleRef from './index';
 

@@ -5,6 +5,7 @@ module.exports = {
     node: true,
     commonjs: true,
     es6: true,
+    'jest/globals': true,
   },
   parser: '@babel/eslint-parser',
   parserOptions: {
@@ -17,7 +18,14 @@ module.exports = {
     react: { version: 'detect' },
     'import/extensions': ['.js', '.json'],
   },
-  plugins: ['import', 'prettier', 'react', 'react-hooks', 'testing-library'],
+  plugins: [
+    'import',
+    'prettier',
+    'react',
+    'react-hooks',
+    'testing-library',
+    'jest',
+  ],
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -48,6 +56,7 @@ module.exports = {
         'react',
         'react-hooks',
         'testing-library',
+        'jest',
       ],
       extends: [
         'eslint:recommended',
