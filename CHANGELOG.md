@@ -1,5 +1,11 @@
 # use-lifecycle-ref
 
+## 1.0.4
+
+### Patch Changes
+
+- 5ea6216: fix: fix typo in package.json
+
 ## 1.0.3
 
 ### Patch Changes
