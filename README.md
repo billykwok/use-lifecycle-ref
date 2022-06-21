@@ -12,14 +12,25 @@ Like useRef, but with lifecycle and ref merging support
 Here is a simplfied demonstration on how easy to use `useLifecycleRef`.
 
 ```tsx
-import React, { type Ref } from 'react';
+import React, { type ForwardedRef, type Ref, forwardRef } from 'react';
 import useLifecycleRef from 'use-lifecycle-ref';
 
-export type Props = {
-  ref: Ref<HTMLDivElement>
+export function ComponentHidingRef({ id }: { id: string }) {
+  const ref = useLifecycleRef<HTMLDivElement>({
+    onAttach: (el: HTMLDivElement) => {
+      console.log(`${el} attached`);
+    },
+    onDetach: (el: HTMLDivElement) => {
+      console.log(`${el} detached`);
+    }
+  });
+  return <div id={id} ref={ref}>Hello World</div>;
 };
 
-export function HelloWorld({ ref }: Props) {
+export const ComponentExposingRef = forwardRef(function HelloWorld(
+  { id }: { id: string },
+  ref: ForwardedRef<HTMLDivElement>
+) {
   const _ref = useLifecycleRef<HTMLDivElement>({
     onAttach: (el: HTMLDivElement) => {
       console.log(`${el} attached`);
@@ -29,8 +40,8 @@ export function HelloWorld({ ref }: Props) {
     },
     ref
   });
-  return <div ref={_ref}>Hello World</div>;
-}
+  return <div id={id} ref={_ref}>Hello World</div>;
+});
 ```
 
 ## Support
