@@ -1,4 +1,5 @@
 export default {
+  injectGlobals: false,
   collectCoverage: true,
   coverageProvider: 'v8',
   coverageDirectory: '<rootDir>/coverage',
