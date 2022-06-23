@@ -1,4 +1,5 @@
 import babel from '@rollup/plugin-babel';
+import nodeExternals from 'rollup-plugin-node-externals';
 import replace from '@rollup/plugin-replace';
 import { terser } from 'rollup-plugin-terser';
 
@@ -28,9 +29,9 @@ export default {
       exports: 'default',
     },
   ],
-  external: [/@babel\/runtime-corejs3/i, 'react'],
   treeshake: { moduleSideEffects: false, propertyReadSideEffects: false },
   plugins: [
+    nodeExternals(),
     babel({
       babelrc: true,
       babelHelpers: 'runtime',
