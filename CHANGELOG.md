@@ -1,5 +1,11 @@
 # use-lifecycle-ref
 
+## 1.0.5
+
+### Patch Changes
+
+- de007a4: fix: remove unneeded engine restrictions
+
 ## 1.0.4
 
 ### Patch Changes
