@@ -11,8 +11,8 @@ const useLifecycleRef = <T extends Element>({
   onDetach,
   ref,
 }: {
-  onAttach?: (element: T) => void;
-  onDetach?: (element: T) => void;
+  onAttach?: (element: T) => any | Promise<any>;
+  onDetach?: (element: T) => any | Promise<any>;
   ref?: Ref<T>;
 }): RefCallback<T> & MutableRefObject<T> => {
   const innerRef = useRef<T>(null);
