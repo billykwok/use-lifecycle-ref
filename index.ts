@@ -6,13 +6,13 @@ import {
   type RefCallback,
 } from 'react';
 
-const useLifecycleRef = <T extends Element>({
+const useLifecycleRef = <T>({
   onAttach,
   onDetach,
   ref,
 }: {
-  onAttach?: (element: T) => any | Promise<any>;
-  onDetach?: (element: T) => any | Promise<any>;
+  onAttach?: (value: T) => any | Promise<any>;
+  onDetach?: (value: T) => any | Promise<any>;
   ref?: Ref<T>;
 }): RefCallback<T> & MutableRefObject<T> => {
   const innerRef = useRef<T>(null);
