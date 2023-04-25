@@ -1,9 +1,10 @@
 import {
-  useMemo,
-  useRef,
   type MutableRefObject,
   type Ref,
   type RefCallback,
+  useRef,
+  useCallback,
+  useMemo,
 } from 'react';
 
 const useLifecycleRef = <T>({
@@ -16,8 +17,8 @@ const useLifecycleRef = <T>({
   ref?: Ref<T>;
 }): RefCallback<T> & MutableRefObject<T> => {
   const innerRef = useRef<T>(null);
-  return useMemo(() => {
-    const callbackRef = ((_ref: T) => {
+  const callbackRef = useCallback(
+    ((_ref: T) => {
       if (innerRef.current) {
         if (onDetach && !_ref) {
           onDetach(innerRef.current);
@@ -33,12 +34,17 @@ const useLifecycleRef = <T>({
           (ref as MutableRefObject<T>).current = _ref;
         }
       }
-    }) as RefCallback<T> & MutableRefObject<T>;
-    return Object.defineProperty(callbackRef, 'current', {
-      set: callbackRef,
-      get: () => innerRef.current,
-    });
-  }, []);
+    }) as RefCallback<T> & MutableRefObject<T>,
+    [onAttach, onDetach, ref]
+  );
+  return useMemo(
+    () =>
+      Object.defineProperty(callbackRef, 'current', {
+        set: callbackRef,
+        get: () => innerRef.current,
+      }),
+    [innerRef, callbackRef]
+  );
 };
 
 export default useLifecycleRef;

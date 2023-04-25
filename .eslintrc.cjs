@@ -63,9 +63,10 @@ module.exports = {
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:import/recommended',
+        'plugin:import/typescript',
         'plugin:react/recommended',
         'plugin:prettier/recommended',
-        'prettier',
         'plugin:testing-library/react',
       ],
       rules: {
