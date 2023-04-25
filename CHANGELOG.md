@@ -1,5 +1,12 @@
 # use-lifecycle-ref
 
+## 1.0.8
+
+### Patch Changes
+
+- 8c9b304: fix: incorrect memoization
+- 00b8baf: fix: use unknown instead of any
+
 ## 1.0.7
 
 ### Patch Changes
