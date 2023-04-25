@@ -1,5 +1,11 @@
 # use-lifecycle-ref
 
+## 1.0.7
+
+### Patch Changes
+
+- df574fa: fix: remove the assumption that ref value is of type Element
+
 ## 1.0.6
 
 ### Patch Changes
